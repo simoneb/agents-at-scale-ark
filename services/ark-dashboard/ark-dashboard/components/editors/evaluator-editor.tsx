@@ -211,6 +211,7 @@ export function EvaluatorEditor({
 
   const removeMatchLabel = (key: string) => {
     if (selector?.labelSelector?.matchLabels) {
+       
       const { [key]: _removed, ...rest } = selector.labelSelector.matchLabels
       setSelector({ 
         ...selector, 
@@ -224,6 +225,7 @@ export function EvaluatorEditor({
 
   const updateMatchLabel = (oldKey: string, newKey: string, value: string) => {
     if (selector?.labelSelector?.matchLabels) {
+       
       const { [oldKey]: _removed, ...rest } = selector.labelSelector.matchLabels
       setSelector({
         ...selector,
